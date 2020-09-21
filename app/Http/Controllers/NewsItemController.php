@@ -27,7 +27,7 @@ class NewsItemController extends Controller
      */
     public function create()
     {
-        return view('news-item.create');
+        return view('news-items.create');
     }
 
     /**
@@ -69,7 +69,7 @@ class NewsItemController extends Controller
             $error = $e->getMessage();
         }
 
-        return view('news-item/show', [
+        return view('news-item.show', [
             'newsItem' => $newsItem,
             'error' => $error
         ]);
