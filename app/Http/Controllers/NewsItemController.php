@@ -45,11 +45,22 @@ class NewsItemController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function show($id)
     {
-        //
+        try {
+            $newsItem = NewsItem::find($id);
+            $error = null;
+        } catch (\Exception $e) {
+            $newsItem = null;
+            $error = $e->getMessage();
+        }
+
+        return view('news-item/show', [
+            'newsItem' => $newsItem,
+            'error' => $error
+        ]);
     }
 
     /**
