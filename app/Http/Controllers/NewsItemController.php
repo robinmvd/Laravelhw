@@ -15,7 +15,7 @@ class NewsItemController extends Controller
     public function index()
     {
         $newsItems = NewsItem::all();
-        return view('news-items/index', [
+        return view('news-items.index', [
             'newsItems' => $newsItems
         ]);
     }
