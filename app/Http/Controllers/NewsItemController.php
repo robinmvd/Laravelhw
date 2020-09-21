@@ -34,11 +34,23 @@ class NewsItemController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+
+        $newsItem = new NewsItem();
+        $newsItem->title = $request->get('title');
+        $newsItem->description = $request->get('description');
+        $newsItem->image = $request->get('image');
+
+        $newsItem->save();
+        return redirect('news')->with('success', 'Bericht is opgeslagen!');
+
     }
 
     /**
