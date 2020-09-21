@@ -30,3 +30,4 @@
             <button type="submit" class="btn-primary btn-block">Bericht Opslaan</button>
         </form>
     </div>
+@endsection

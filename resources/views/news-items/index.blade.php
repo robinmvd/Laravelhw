@@ -1,4 +1,4 @@
-@extends('layouts.php')
+@extends('layouts.app')
 
 @section('content')
     <header class="jumbotron">
@@ -13,12 +13,12 @@
         </div>
         @endif
     <div class="row">
-        @foreach($newsItem as $newsItem)
+        @foreach($newsItems as $newsItem)
             <div class="col-sm card border-9">
                 <h2 class="card-title">{{$newsItem['title']}}</h2>
                 <p class="card-text">{{$newsItem['description']}}</p>
                 <img src="{{$newsItem['image']}}" alt="{{$newsItem['title']}}" class="card-img">
-                <a  class="btn btn-light" href="{{route('news.shows', $newsItem['id'])}}">Lees meer</a>
+                <a  class="btn btn-light" href="{{route('news.show', $newsItem['id'])}}">Lees meer</a>
             </div>
         @endforeach
     </div>
