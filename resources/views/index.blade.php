@@ -17,8 +17,8 @@
             <div class="col-sm card border-9">
                 <h2 class="card-title">{{$newsItem['title']}}</h2>
                 <p class="card-text">{{$newsItem['description']}}</p>
-                <img src="{{$newsItem['image']}}" alt="image" class="card-img">
-                <a  class="btn btn-light" href="{{route('news.shows', $newsItem['title'])}}"></a>
+                <img src="{{$newsItem['image']}}" alt="{{$newsItem['title']}}" class="card-img">
+                <a  class="btn btn-light" href="{{route('news.shows', $newsItem['id'])}}">Lees meer</a>
             </div>
         @endforeach
     </div>
