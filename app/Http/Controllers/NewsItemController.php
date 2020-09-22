@@ -69,7 +69,7 @@ class NewsItemController extends Controller
             $error = $e->getMessage();
         }
 
-        return view('news-item.show', [
+        return view('news-items.show', [
             'newsItem' => $newsItem,
             'error' => $error
         ]);
