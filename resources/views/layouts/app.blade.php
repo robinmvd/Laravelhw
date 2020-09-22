@@ -6,6 +6,10 @@
     <meta name=csrf-token content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
 <main>
@@ -14,7 +18,7 @@
             @auth
                 <a href="{{ url('/home') }}">Home</a>
             @else
-                <a href="{{ url('/login') }}">Login</a>
+                <a href="{{ url('login') }}">Login</a>
 
                 @if (Route::has('register'))
                     <a href="{{ url('/register') }}">Register</a>
