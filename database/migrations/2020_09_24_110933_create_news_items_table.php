@@ -18,6 +18,7 @@ class CreateNewsItemsTable extends Migration
             $table->string('title');
             $table->string('image');
             $table->text('description');
+            $table->foreignId('category_id')->constrained('categories')->nullable();
             $table->timestamps();
         });
     }
