@@ -4,6 +4,7 @@
     <list default="true" id="2917c187-bd78-4a81-8874-cf28607b0fd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsItemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news-items/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news-items/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +197,7 @@
       <workItem from="1600862894378" duration="2537000" />
       <workItem from="1600870118280" duration="1436000" />
       <workItem from="1600871628006" duration="3538000" />
-      <workItem from="1600937577525" duration="3545000" />
+      <workItem from="1600937577525" duration="5157000" />
     </task>
     <servers />
   </component>
@@ -240,10 +241,10 @@
     </state>
     <state x="141" y="50" key="SettingsEditor/0.23.1280.777/1280.23.1194.811@0.23.1280.777" timestamp="1600869434598" />
     <state x="141" y="50" key="SettingsEditor/0.23.1280.777/1280.23.1366.1001@0.23.1280.777" timestamp="1600699989612" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1600938432077">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1600947664773">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777/1280.23.1194.811@0.23.1280.777" timestamp="1600938432077" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777/1280.23.1194.811@0.23.1280.777" timestamp="1600947664773" />
     <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777/1280.23.1366.1001@0.23.1280.777" timestamp="1600700722226" />
   </component>
 </project>

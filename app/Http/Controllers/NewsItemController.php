@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\NewsItem;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,7 @@ class NewsItemController extends Controller
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
+
     {
         $newsItems = NewsItem::orderBy('created_at', 'desc')->get();
         return view('news-items.index', compact('newsItems'));
@@ -25,7 +27,8 @@ class NewsItemController extends Controller
      */
     public function create()
     {
-        return view('news-items.create');
+        $categories = Category::all();
+        return view('news-items.create', compact('categories'));
     }
 
     /**
@@ -39,16 +42,18 @@ class NewsItemController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'image' => 'required',
+            'category' => ['exists:categories,id'],
         ]);
 
         $newsItem = new NewsItem();
         $newsItem->title = $request->get('title');
         $newsItem->description = $request->get('description');
+        $newsItem->category_id = $request->get('category');
         $newsItem->image = $request->get('image');
 
         $newsItem->save();
         return redirect('news')->with('success', 'Bericht is opgeslagen!');
-
     }
 
     /**
