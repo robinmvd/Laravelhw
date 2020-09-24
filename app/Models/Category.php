@@ -27,7 +27,7 @@ class Category extends Model
 
     public function newsItem()
     {
-        return $this->hasMany('App\NewsItem');
+        return $this->hasMany(NewsItem::class);
     }
 
     use HasFactory;
