@@ -29,5 +29,12 @@ use Illuminate\Database\Eloquent\Model;
  */
 class NewsItem extends Model
 {
+    public $fillable = ['title','image', 'description', 'category_id'];
+
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
     use HasFactory;
 }

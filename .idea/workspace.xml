@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2917c187-bd78-4a81-8874-cf28607b0fd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_24_110434_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_23_140644_create_news_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_24_110933_create_news_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/NewsItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/NewsItem.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +195,7 @@
       <workItem from="1600862894378" duration="2537000" />
       <workItem from="1600870118280" duration="1436000" />
       <workItem from="1600871628006" duration="3538000" />
-      <workItem from="1600937577525" duration="2591000" />
+      <workItem from="1600937577525" duration="2891000" />
     </task>
     <servers />
   </component>

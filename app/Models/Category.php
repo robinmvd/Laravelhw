@@ -23,5 +23,12 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Category extends Model
 {
+    public $fillable = ['title'];
+
+    public function newsItem()
+    {
+        return $this->hasMany('App\NewsItem');
+    }
+
     use HasFactory;
 }
