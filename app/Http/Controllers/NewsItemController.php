@@ -14,10 +14,8 @@ class NewsItemController extends Controller
      */
     public function index()
     {
-        $newsItems = NewsItem::all();
-        return view('news-items.index', [
-            'newsItems' => $newsItems
-        ]);
+        $newsItems = NewsItem::orderBy('created_at', 'desc')->get();
+        return view('news-items.index', compact('newsItems'));
     }
 
     /**
@@ -61,18 +59,12 @@ class NewsItemController extends Controller
      */
     public function show($id)
     {
-        try {
-            $newsItem = NewsItem::find($id);
-            $error = null;
-        } catch (\Exception $e) {
-            $newsItem = null;
-            $error = $e->getMessage();
+        $newsItem = NewsItem::find($id);
+        if ($newsItem === null) {
+            abort(404, "Dit nieuwsitem is niet gevonden.");
         }
 
-        return view('news-items.show', [
-            'newsItem' => $newsItem,
-            'error' => $error
-        ]);
+        return view('news-items.show', compact('newsItem'));
     }
 
     /**
