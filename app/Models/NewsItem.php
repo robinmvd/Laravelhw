@@ -24,6 +24,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|NewsItem whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NewsItem whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property int $category_id
+ * @method static \Illuminate\Database\Eloquent\Builder|NewsItem whereCategoryId($value)
  */
 class NewsItem extends Model
 {
